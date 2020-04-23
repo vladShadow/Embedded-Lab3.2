@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/forSpinner"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="42dp"
+    android:layout_marginRight="32dp"
+    android:background="#EAE7E7"
+    android:gravity="center"
+    android:text="ВИБЕРІТЬ ШВИДКІСТЬ НАВЧАННЯ" />
+
+    <Spinner
+    android:background="#EAE7E7"
+    android:id="@+id/spinner_st"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@+id/forSpinner"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="32dp" />
+
+<LinearLayout
+    android:background="#EAE7E7"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:id="@+id/switch_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginLeft="32dp"
+    android:layout_below="@+id/spinner_st">
+
+    <Switch
+        android:id="@+id/switch_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:showText="true"
+        android:text="ВИБЕРІТЬ ТИП ДЕДЛАЙНУ      "
+        android:textOff="ЧАС"
+        android:textOn="ІТЕРАЦІЇ" />
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/forSpinner2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/switch_layout"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="#EAE7E7"
+        android:gravity="center"
+        android:text="ВИБЕРІТЬ ЗНАЧЕННЯ ДЕДЛАЙНУ" />
+
+    <Spinner
+        android:id="@+id/spinner_d"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/forSpinner2"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="#EAE7E7" />
+
+    <Button
+    android:gravity="center"
+    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginLeft="32dp"
+    android:id="@+id/calculate_button"
+    android:layout_below="@+id/spinner_d"
+    android:text="ЗАПУСТИТИ"/>
+
+<TextView
+    android:background="#EAE7E7"
+    android:id="@+id/result_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/calculate_button"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="32dp"
+    android:layout_marginBottom="74dp"
+    android:gravity="center"
+    android:text="Введіть дані та натисність кнопку запуску." />
+
+</RelativeLayout>
