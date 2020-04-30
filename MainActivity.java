@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             @Override
             public void onClick(View view) {
                 resultText.setText(process());
+
             }
         });
 
@@ -132,6 +133,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             }
             if (i >= deadline * 2) {
                 end = System.nanoTime();
+                Toast.makeText(getApplicationContext(),"Час виконання: " + (end - start)/1000 + " мкс.",Toast.LENGTH_SHORT).show();
                 return "Було досягнуто дедлайну ітерацій.\nW1 = " + W1 + ", W2 = " + W2 + ";" +
                         "\nчас: " + (end - start)/1000 + " мкс;\nітерацї: " + (i / 2);
             }
@@ -151,11 +153,13 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                 i = i + 2;
                 end = System.nanoTime();
                 if ((end - start) >= deadline * 1000000000) {
+                    Toast.makeText(getApplicationContext(),"Час виконання: " + (end - start)/1000 + " мкс.",Toast.LENGTH_SHORT).show();
                     return "Було досягнуто дедлайну по часу.\nW1 = " + W1 + ", W2 = " + W2 + ";" +
                             "\nчас: " + (end - start)/1000 + " мкс;\nітерацї: " + (i / 2 + 1);
                 }
             }
         }
+        Toast.makeText(getApplicationContext(),"Час виконання: " + (end - start)/1000 + " мкс.",Toast.LENGTH_SHORT).show();
         return "Було знайдено рішення: W1 = " + W1 + ", W2 = " + W2 + ";" +
                 "\nчас: " + (end - start)/1000 + " мкс;\nітерацї: " + (i / 2 + 1);
     }
